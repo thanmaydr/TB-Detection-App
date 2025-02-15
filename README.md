@@ -78,9 +78,3 @@ Upload an X-ray image to analyze TB and view the blockchain record.
 - Blockchain transaction security
 - Data privacy measures
 - Access control implementation
-
-## License
-This project is licensed under the MIT License.
-
-## Contact
-For issues and contributions, please create an issue or submit a pull request.
