@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TB Detection System Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>TB Detection System Documentation</h1>
+
+    <div class="section">
+        <h2>1. System Overview</h2>
+        <p>The TB Detection System is an AI-powered application that analyzes chest X-rays to detect tuberculosis. It combines deep learning with blockchain technology for secure record-keeping.</p>
+        
+        <div class="note">
+            <strong>Key Features:</strong>
+            <ul>
+                <li>AI-based TB detection from X-ray images</li>
+                <li>Web-based user interface</li>
+                <li>Blockchain record storage</li>
+                <li>9-class TB classification</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. System Requirements</h2>
+        <h3>Software Requirements:</h3>
+        <ul>
+            <li>Python 3.x</li>
+            <li>TensorFlow</li>
+            <li>Flask</li>
+            <li>OpenCV</li>
+            <li>Web3.py</li>
+            <li>Ganache (Blockchain)</li>
+        </ul>
+
+        <h3>Hardware Requirements:</h3>
+        <ul>
+            <li>Minimum 8GB RAM</li>
+            <li>Storage space for model files (~100MB)</li>
+            <li>GPU (optional but recommended)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Installation Steps</h2>
+        <ol>
+            <li>Install Python dependencies:
+                <code>pip install tensorflow flask opencv-python web3 numpy</code>
+            </li>
+            <li>Install Ganache for blockchain simulation</li>
+            <li>Clone project repository</li>
+            <li>Set up environment variables</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>4. Project Structure</h2>
+        <pre>
+project/
+├── app.py (Main Flask application)
+├── model.py (AI model implementation)
+├── templates/
+│   ├── index.html (Upload interface)
+│   └── result.html (Results display)
+├── static/
+│   └── uploads/ (Image storage)
+└── blockchain/
+    └── contracts/ (Smart contracts)
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>5. How to Use</h2>
+        <ol>
+            <li>Start Ganache blockchain simulation</li>
+            <li>Run Flask application:
+                <code>python app.py</code>
+            </li>
+            <li>Access web interface at: <code>http://localhost:5000</code></li>
+            <li>Upload X-ray image</li>
+            <li>View results and blockchain record</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>6. Features</h2>
+        <h3>Image Processing:</h3>
+        <ul>
+            <li>Automatic image resizing to 100x100 pixels</li>
+            <li>Image normalization</li>
+            <li>Support for common image formats</li>
+        </ul>
+
+        <h3>AI Model:</h3>
+        <ul>
+            <li>Convolutional Neural Network (CNN)</li>
+            <li>9-class classification</li>
+            <li>High accuracy detection</li>
+        </ul>
+
+        <h3>Blockchain Integration:</h3>
+        <ul>
+            <li>Secure record storage</li>
+            <li>Transaction tracking</li>
+            <li>Impact counter</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Troubleshooting</h2>
+        <div class="note">
+            <strong>Common Issues:</strong>
+            <ul>
+                <li><strong>Model Loading Error:</strong> Verify full_model.h5 exists</li>
+                <li><strong>Blockchain Connection:</strong> Check if Ganache is running</li>
+                <li><strong>Upload Issues:</strong> Verify upload directory permissions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>8. Classification Categories</h2>
+        <ul>
+            <li>PTB (Pulmonary Tuberculosis)</li>
+            <li>Normal</li>
+            <li>ATB (Active Tuberculosis)</li>
+            <li>Tuberculosis Pleuritis</li>
+            <li>NATB</li>
+            <li>STB</li>
+            <li>TB</li>
+            <li>Right Upper Pneumonia</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Security Considerations</h2>
+        <ul>
+            <li>Secure file upload handling</li>
+            <li>Blockchain transaction security</li>
+            <li>Data privacy measures</li>
+            <li>Access control implementation</li>
+        </ul>
+    </div>
+</body>
+</html>
